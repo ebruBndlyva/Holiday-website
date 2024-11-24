@@ -1,0 +1,108 @@
+#adopt {
+  font-family: $site-fonts;
+  .adopt-wrapper {
+padding: 100px 0;
+    @include grid(repeat(2, 1fr));
+    align-items: center;
+    gap: 50px;
+    @include responsive(medium2) {
+      @include grid(1fr);
+    }
+  
+
+    .adopt-left {
+     
+      @include flex(center, flex-start, column, 30px);
+      @include responsive(medium2) {
+      margin-bottom: 120px;
+      }
+    
+      .adopt-img {
+        // width: 400px;
+        // height: 400px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .adopt-info {
+        @include flex(center, flex-start, column, 30px);
+        p {
+          color: $parag-color;
+          width: 78%;
+          line-height: 2;
+        }
+        a {
+          text-decoration: none;
+          padding: 10px 20px;
+          color: $redColor1;
+          font-weight: 500;
+          border: 2px solid $redColor1;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          &:hover {
+            color: white;
+            background-color: $redColor1;
+          }
+        }
+      }
+    }
+    .adopt-right {
+    
+      @include flex(flex-start, flex-start, column, 50px);
+      h2 {
+        font-size: 32px;
+        font-weight: 400;
+        margin-top: -150px;
+      }
+      .accordion {
+        width: 100%;
+        .accordion-content {
+          overflow: hidden;
+          width: 100%;
+          border: 1px solid #dee2e6;
+          border-radius: 5px;
+          margin-bottom: 10px;
+
+          .accordion-head {
+            color: black;
+            width: 100%;
+    
+            &:hover {
+              box-shadow: 0px 1px 10px -3px rgb(190, 190, 190);
+            }
+            h5 {
+              width: 100%;
+             
+              @include flex(space-between, center);
+              padding: 15px;
+              a {
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+                font-size: 16px;
+              }
+            }
+          }
+       .accordion-info{
+         transition: all 0.3s linear;
+         height: 0px;
+         
+         .accordion-desc {
+            padding: 15px 25px 20px;
+            font-size: 15px;
+            color: $parag-color;
+            line-height: 1.7;
+          }
+       }
+       .open {
+         height: auto;
+        
+       }
+         
+        }
+     
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+
+.edites-form{
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    padding: 40px;
+    .edit-form{
+        @include flex(flex-start,flex-start,column,20px);
+        input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(185, 177, 177);
+            border-radius: 5px;
+           } 
+           button{
+            @include redBtn;
+            background-color: blue;
+            &:hover{
+              background-color: blue;
+            }
+           }
+           
+    .close2 {
+        @include redBtn;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+}

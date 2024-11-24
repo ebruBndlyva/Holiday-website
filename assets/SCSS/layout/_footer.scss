@@ -1,0 +1,85 @@
+footer {
+  padding: 100px 0;
+  font-family: $site-fonts;
+  background-color: #BC5148;
+  .footer-wrapper {
+    @include grid(repeat(4, 1fr));
+    gap: 60px;
+
+    .foot {
+        @include flex(flex-start,flex-start,column,30px);
+      h3 {
+        font-size: 13px;
+        text-transform: uppercase;
+        color: white;
+      }
+      a{
+        color: #FFC107;
+        font-size: 13px;
+        transition: all .3s ease;
+
+        &:hover{
+            color: white;
+            border-bottom: 1px solid white;
+        }
+      }
+    }
+    .about{
+        p{
+            font-size: 13px;
+            color: #ffffff80;
+        }
+       
+
+    }
+    .contact{
+        ul{
+            @include flex(flex-start,flex-start,column,15px);
+            .head{
+                color: #ffffff80;
+            }
+            span{
+                margin-left: 10px;
+                font-size: 13px;
+                color: white;
+            }
+        }
+    }
+    .links{
+        ul{
+            @include flex(flex-start,flex-start,column,15px);
+        }
+    }
+    .social{
+        ul{
+            @include flex(flex-start,flex-start,row,15px); 
+            a{
+                @include flex(center,center); 
+                padding: 8px 10px;
+                border: 1px solid rgba(167, 163, 163, 0.2);
+                border-radius: 100%;
+               &:hover{
+                border-color: white;
+                background-color: white;
+                color: black;
+               }
+            }
+        }
+    }
+ 
+  }
+  .foot-info{
+        margin-top: 100px;
+    text-align: center;
+    
+        font-size: 13px;
+        color: #ffffff80;
+    a{
+        color: #FFC107;
+        &:hover{
+            color: white;
+            border-bottom: 1px solid white;
+        }
+    }
+}
+}

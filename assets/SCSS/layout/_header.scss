@@ -1,0 +1,122 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+
+
+  font-family: $site-fonts;
+
+  .header-wrapper {
+    .top-bar {
+      background-color: $redColor1;
+
+      .top-wrapper {
+        @include flex(space-between, center);
+       
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+      .top-links {
+        @include flex(flex-start, center, row, 30px);
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          transition: all 0.3s ease;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      .top-btns {
+        @include flex(flex-start, center, row, 5px);
+        font-size: 13px;
+        .login-btn {
+          background-color: #f4b214;
+          padding: 13px 15px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: white;
+          }
+        }
+        .sponsor-btn {
+          padding: 10px 15px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: white;
+            box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+ 
+   .navbar-wrapper{
+   transition: all .3s ease;
+    .navbar {
+     
+      @include flex(space-between, center);
+      padding: 20px 0;
+   
+      .logo {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+      }
+      .nav-links {
+        @include flex(flex-start, center);
+        @include responsive(large2) {
+          display: none;
+        }
+        li {
+          position: relative;
+          &:first-child a {
+            color: $redColor1;
+          }
+          &:nth-child(2) a {
+            &::after {
+              content: "";
+              border-top: 4px solid;
+              border-left: 4px solid transparent;
+              border-right: 4px solid transparent;
+              display: inline-block;
+              position: absolute;
+              top: 9px;
+              left: 90px;
+            }
+          }
+        }
+        a {
+        
+          color: white;
+          padding: 15px;
+          transition: all 0.3s ease;
+        
+        }
+      }
+      .nav-menu {
+        display: none;
+        color: $parag-color;
+    
+        padding:0px 12px;
+        border: 2px solid rgba(0, 0, 0, 0.1);;
+        border-radius: 5px;
+        @include responsive(large2) {
+          display: flex;
+        }
+        i{
+            font-size: 30px;
+        }
+      }
+    }
+   }
+  }
+  }
+

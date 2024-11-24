@@ -1,0 +1,30 @@
+#contact{
+    font-family: $site-fonts;
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    .contact-wrapper{
+        h2{
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        form{
+            @include grid(repeat(3,1fr));
+            gap: 50px;
+           
+            input{
+                border: 1px solid rgb(180, 177, 177);
+              width: 100%;
+              padding: 15px 0;
+              padding-left: 10px;
+              border-radius: 5px;
+              font-size:17px;
+            }
+            button{
+                @include redBtn;
+              
+            }
+        }
+    }
+}

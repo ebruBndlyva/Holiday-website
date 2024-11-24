@@ -1,0 +1,46 @@
+body{
+  
+  position: relative;
+}
+
+
+.modal {
+  width: 500px;
+  height: auto;
+  font-family: $site-fonts;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal-content {
+    // position: relative;
+
+    // margin: 10% auto;
+    padding: 20px;
+    // width: 80%;
+    // max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+
+    .close {
+      @include redBtn;
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      &:hover {
+        color: black;
+      }
+    }
+    p {
+      font-size: 28px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}

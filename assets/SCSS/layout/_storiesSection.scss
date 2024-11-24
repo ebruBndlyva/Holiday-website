@@ -1,0 +1,158 @@
+#stories {
+  font-family: $site-fonts;
+  background-color: #f8f9fa;
+ padding-top: 50px;
+ padding-bottom: 100px;
+  .stories-wrapper {
+    .stories-form{
+      margin-bottom: 50px; 
+     
+      form{
+        @include flex(flex-start,flex-start,column,20px);
+
+       input{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgb(185, 177, 177);
+        border-radius: 5px;
+       } 
+       button{
+        @include redBtn;
+        background-color: green;
+        &:hover{
+          background-color: green;
+        }
+       }
+      }
+    }
+    .stories-head {
+      @include flex(flex-start, center, column, 35px);
+      text-align: center;
+      h2 {
+        font-size: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      p {
+        text-align: center;
+        color: $parag-color;
+        font-size: 20px;
+        width: 70%;
+        font-weight: 200;
+        line-height: 1.7;
+      }
+      a {
+        @include redBtn;
+      }
+    }
+    .stories-main {
+      margin-top: 70px;
+
+      width: 100%;
+      position: relative;
+      .storie-control {
+        font-size: 45px;
+        font-weight: 800;
+        position: absolute;
+        width: 100%;
+        @include flex(space-between, center);
+        top: 50%;
+
+        .storie-left {
+          margin-left: 40px;
+        }
+        .storie-right {
+          margin-right: 40px;
+        }
+      }
+      .search{
+        margin-bottom: 50px;
+       
+          input{
+         
+            border-radius: 5px;
+            padding: 10px 20px;
+            border: 1px solid rgb(202, 201, 201);
+            font-size: 17px;
+
+            &:focus{
+              border: 1px solid rgb(202, 201, 201); 
+            }
+          }
+         
+        }
+      }
+      .stories-cards {
+      
+        
+        
+      
+        @include grid(repeat(3, 1fr));
+        @include responsive(large){
+          @include grid(repeat(2, 1fr));
+        }
+        @include responsive(medium2){
+          @include grid(1fr);
+        }
+       
+        gap: 20px;
+       
+        .storie-card {
+     
+          background-color: white;
+          overflow: hidden;
+
+          &:hover .storie-img img {
+            transform: scale(1.2);
+          }
+
+       
+          .storie-img {
+            overflow: hidden;
+            width: 100%;
+            height: 80%;
+       
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              transition: all 0.3s ease;
+            }
+          }
+          .storie-info {
+            @include flex(space-between,center);
+            padding: 30px 15px 30px 15px;
+
+            a {
+              text-decoration: none;
+              color: black;
+              font-size: 20px;
+              span {
+                color: #868e96;
+                font-size: 14px;
+              }
+            }
+            .storie-btns {
+              @include flex(flex-end,flex-start,row,10px);
+           
+              .fa-circle-info{
+                color: $parag-color;
+              }
+              .fa-circle-minus{
+                color: $redColor1;
+              }
+              .fa-pen-to-square{
+                color: #f4b214;
+              }
+              i {
+                font-size: 20px;
+              }
+            }
+          }
+        
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,65 @@
+@mixin flex($justify, $align, $direction: row, $gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+   
+
+}
+@mixin grid($repeat) {
+    display: grid;
+    grid-template-columns: $repeat;
+   
+}
+@mixin redBtn{
+    text-decoration: none;
+        background-color: $redColor1;
+        padding: 11px 20px;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover{
+            background-color: #CA746D;
+        }
+}
+@mixin responsive($breakpoints) {
+
+
+    @if $breakpoints ==small {
+        @media(max-width: 575px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints ==medium {
+        @media (min-width:576px) and (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $breakpoints ==medium2 {
+        @media  (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints ==large {
+        @media(min-width:768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $breakpoints ==large2 {
+        @media(max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints ==desktop {
+        @media(min-width:992px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+}
